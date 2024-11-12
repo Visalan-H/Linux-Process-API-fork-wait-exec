@@ -2,11 +2,8 @@
 Ex02-Linux Process API-fork(), wait(), exec()
 # Ex02-OS-Linux-Process API - fork(), wait(), exec()
 Operating systems Lab exercise
-
-
 # AIM:
 To write C Program that uses Linux Process API - fork(), wait(), exec()
-
 # DESIGN STEPS:
 ### Step 1:
 Navigate to any Linux environment installed on the system or installed inside a virtual environment like virtual box/vmware or online linux JSLinux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192) or docker.
@@ -23,16 +20,9 @@ Test the C Program for the desired output.
 int main() {
     int pid;
     pid = fork();
-    if (pid == 0) {
-        printf("Iam Child my pid is %d\n", getpid());
-        printf("My parent pid is %d\n", getppid());
-        exit(0);
-    } else {
-        printf("Iam parent my pid is %d\n", getpid());
-        sleep(100);
-        exit(0);
-    }
-}
+    if (pid == 0) { printf("Iam Child my pid is %d\n", getpid()); printf("My parent pid is %d\n", getppid()) exit(0);;
+    } else { printf("Iam parent my pid is %d\n", getpid()); sleep(100);exit(0);
+    }}
 ```
 ## OUTPUT
 
@@ -64,8 +54,7 @@ int main() {
         sleep(10); 
         printf("Parent process is exiting.\n");
         exit(0);  
-    }
-}
+    }}
 ```
 ## OUTPUT
 <img src="https://github.com/user-attachments/assets/2a31537d-4269-4901-919f-09db590381d2" width="400px">
